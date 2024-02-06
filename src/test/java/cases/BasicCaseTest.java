@@ -1,23 +1,23 @@
 package cases;
 
 import org.testng.annotations.Test;
-import pages.BasePage;
+import pages.createPage.CreateAccountPage;
 
 public class BasicCaseTest extends BaseTest {
-    BasePage basePage = new BasePage(driver);
-
     @Test
     public void leaveAllFieldsBlank() {
-        basePage.enterCreateAccountWindowTest();
-        basePage.clickOnCreateButton();
-        basePage.verifyErrorProperties();
+        CreateAccountPage createAccountPage = new CreateAccountPage(driver);
+        createAccountPage.enterCreateAccountWindowTest();
+        createAccountPage.clickOnCreateButton();
+        createAccountPage.verifyErrorProperties();
     }
 
     @Test
     public void fillWithCorrectData() {
-        basePage.enterCreateAccountWindowTest();
-        basePage.fillWithCorrectData();
-        basePage.clickOnCreateButton();
-        basePage.verifyTitle();
+        CreateAccountPage createAccountPage = new CreateAccountPage(driver);
+        createAccountPage.enterCreateAccountWindowTest();
+        createAccountPage.fillWithCorrectData();
+        createAccountPage.clickOnCreateButton();
+        createAccountPage.verifyTitle();
     }
 }

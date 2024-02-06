@@ -3,10 +3,16 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import utils.Constants;
 import utils.Sleeper;
 
 public class CheckOutPage extends BasePage {
-    public static final String COMPANY = "Company", ADRESS = "Sos. Crocodililor", CITY = "Bucuresti", ZIP = "123456", PHONE = "21323543";
+    @FindBy(xpath = "//input[@name='company']") WebElement company;
+
+    @FindBy(css = ".button.action.continue.primary") WebElement nextButton;
+
+    @FindBy(css = ".action.primary.checkout") WebElement checkoutButton;
 
     public CheckOutPage(WebDriver driver) {
         super(driver);
@@ -14,27 +20,30 @@ public class CheckOutPage extends BasePage {
 
     public void completeFieldWithInformation(String xpath, String info) {
         Sleeper.waitInSeconds(1);
-        driver.findElement(By.xpath("//input[@name='" + xpath + "']")).sendKeys(info);
+        WebElement element = driver.findElement(By.xpath(STR."//input[@name='\{xpath}']"));
+        Sleeper.waitUntilIsInteractable(driver, element);
+        element.sendKeys(info);
     }
 
     public void completeCompanyField() {
-        driver.findElement(By.xpath("//input[@name='company']")).sendKeys(COMPANY);
+        Sleeper.waitUntilIsInteractable(driver, company);
+        company.sendKeys(Constants.COMPANY);
     }
 
     public void clickAndSelectField(String xpath, String selection) {
-        driver.findElement(By.xpath("//input[@name='" + xpath + "']")).click();
+        driver.findElement(By.xpath(STR."//select[@name='\{xpath}']")).click();
         WebElement element = driver.findElement(By.xpath(selection));
         Sleeper.waitUntilIsVisible(driver, element);
         element.click();
     }
 
     public void pressNextButton() {
-        driver.findElement(By.cssSelector(".button.action.continue.primary")).click();
+        Sleeper.waitUntilIsVisible(driver, nextButton);
+        nextButton.click();
     }
 
     public void pressOrderCheckout() {
-        WebElement element = driver.findElement(By.cssSelector(".action.primary.checkout"));
-        Sleeper.waitUntilIsVisible(driver, element);
-        element.click();
+        Sleeper.waitUntilIsVisible(driver, checkoutButton);
+        checkoutButton.click();
     }
 }

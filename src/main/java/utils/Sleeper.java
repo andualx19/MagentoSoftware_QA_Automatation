@@ -21,6 +21,12 @@ public class Sleeper {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    public static void waitUntilIsInteractable(WebDriver driver, WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    @Deprecated
     public static void checkIfURLIsChanged(WebDriver driver) {
         String currentURL = driver.getCurrentUrl();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));

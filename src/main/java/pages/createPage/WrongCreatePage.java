@@ -1,4 +1,4 @@
-package pages;
+package pages.createPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,7 +7,7 @@ import utils.Constants;
 import utils.ErrorWarnings;
 import utils.Sleeper;
 
-public class WrongCreatePage extends BasePage {
+public class WrongCreatePage extends StructureCreatePage {
     public WrongCreatePage(WebDriver driver) {
         super(driver);
     }

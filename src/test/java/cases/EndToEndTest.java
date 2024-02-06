@@ -47,15 +47,15 @@ public class EndToEndTest extends BaseTest {
         headerPage.clickCartButton();
         headerPage.clickProceedCheckButton();
 
-//        checkOutPage.completeFieldWithInformation(Constants.COMPANY_X, CheckOutPage.COMPANY);
-//        checkOutPage.completeCompanyField();
-        checkOutPage.completeFieldWithInformation(Constants.STREET_X, CheckOutPage.ADRESS);
-        checkOutPage.completeFieldWithInformation(Constants.CITY_X, CheckOutPage.CITY);
-        checkOutPage.completeFieldWithInformation(Constants.ZIP_X, CheckOutPage.ZIP);
-        checkOutPage.completeFieldWithInformation(Constants.PHONE_X, CheckOutPage.PHONE);
+        checkOutPage.completeCompanyField();
+        checkOutPage.completeFieldWithInformation(Constants.STREET_X, Constants.ADRESS);
+        checkOutPage.completeFieldWithInformation(Constants.CITY_X, Constants.CITY);
+        checkOutPage.completeFieldWithInformation(Constants.ZIP_X, Constants.ZIP);
+        checkOutPage.completeFieldWithInformation(Constants.PHONE_X, Constants.PHONE);
         checkOutPage.clickAndSelectField(Constants.COUNTRY_I_X, Constants.COUNTRY_O_X);
         checkOutPage.clickAndSelectField(Constants.JUDET_I_X, Constants.JUDET_O_X);
 
         checkOutPage.pressNextButton();
+        checkOutPage.pressOrderCheckout();
     }
 }

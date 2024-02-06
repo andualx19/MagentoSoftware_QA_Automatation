@@ -1,58 +1,67 @@
 package cases;
 
 import org.testng.annotations.Test;
-import pages.BasePage;
-import pages.WrongCreatePage;
+import pages.createPage.CreateAccountPage;
+import pages.createPage.WrongCreatePage;
 
 public class WrongDataTest extends BaseTest {
-    BasePage basePage = new BasePage(driver);
-    WrongCreatePage createPage = new WrongCreatePage(driver);
-
     @Test
     public void correctNameFieldTest() {
-        basePage.enterCreateAccountWindowTest();
+        CreateAccountPage createAccountPage = new CreateAccountPage(driver);
+        WrongCreatePage createPage = new WrongCreatePage(driver);
+        createAccountPage.enterCreateAccountWindowTest();
         createPage.fillWithCase1();
-        basePage.clickOnCreateButton();
+        createAccountPage.clickOnCreateButton();
         createPage.verifyCase1();
     }
 
     @Test
     public void fillWithWrongMailTest() {
-        basePage.enterCreateAccountWindowTest();
+        CreateAccountPage createAccountPage = new CreateAccountPage(driver);
+        WrongCreatePage createPage = new WrongCreatePage(driver);
+        createAccountPage.enterCreateAccountWindowTest();
         createPage.fillWithCase2();
-        basePage.clickOnCreateButton();
+        createAccountPage.clickOnCreateButton();
         createPage.verifyCase2();
     }
 
     @Test
     public void fillWithCorrectMailTest() {
-        basePage.enterCreateAccountWindowTest();
+        CreateAccountPage createAccountPage = new CreateAccountPage(driver);
+        WrongCreatePage createPage = new WrongCreatePage(driver);
+        createAccountPage.enterCreateAccountWindowTest();
         createPage.fillWithCase3();
-        basePage.clickOnCreateButton();
+        createAccountPage.clickOnCreateButton();
         createPage.verifyCase3();
     }
 
     @Test
     public void fillWithLowPowerPassword() {
-        basePage.enterCreateAccountWindowTest();
+        CreateAccountPage createAccountPage = new CreateAccountPage(driver);
+        WrongCreatePage createPage = new WrongCreatePage(driver);
+        createAccountPage.enterCreateAccountWindowTest();
         createPage.fillWithCase4();
-        basePage.clickOnCreateButton();
+        createAccountPage.clickOnCreateButton();
         createPage.verifyCase4();
     }
 
     @Test
     public void fillWithCorectPassword() {
-        basePage.enterCreateAccountWindowTest();
+        CreateAccountPage createAccountPage = new CreateAccountPage(driver);
+        WrongCreatePage createPage = new WrongCreatePage(driver);
+        createAccountPage.enterCreateAccountWindowTest();
         createPage.fillWithCase5();
-        basePage.clickOnCreateButton();
+        createAccountPage.clickOnCreateButton();
         createPage.verifyCase5();
     }
 
     @Test
     public void fillWithIncorrectConfPassword() {
-        basePage.enterCreateAccountWindowTest();
+        CreateAccountPage createAccountPage = new CreateAccountPage(driver);
+        WrongCreatePage createPage = new WrongCreatePage(driver);
+        createAccountPage.enterCreateAccountWindowTest();
         createPage.fillWithCase6();
-        basePage.clickOnCreateButton();
+        createAccountPage.clickOnCreateButton();
         createPage.verifyCase6();
     }
 }
