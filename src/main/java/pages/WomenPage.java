@@ -6,22 +6,22 @@ import org.openqa.selenium.support.FindBy;
 import utils.Sleeper;
 
 public class WomenPage extends BasePage {
-    @FindBy(css = "#narrow-by-list2 .items .item:nth-child(1)")
+    @FindBy(css = "#narrow-by-list2 .items .item:nth-child(1) a")
     WebElement topsButton;
 
-    @FindBy(css = "#narrow-by-list .filter-options-item.allow .filter-options-title")
+    @FindBy(css = ".filter-options-item:nth-child(1)")
     WebElement categoryButton;
 
-    @FindBy(css = "#narrow-by-list > div.filter-options-item.allow.active > div.filter-options-content > ol > li:nth-child(3)")
+    @FindBy(css = "#narrow-by-list > div.filter-options-item.allow.active > div.filter-options-content > ol > li:nth-child(3) a")
     WebElement teesButton;
 
-    @FindBy(css = "#narrow-by-list .filter-options-item:nth-child(1)")
+    @FindBy(css = ".filter-options-item:nth-child(1)")
     WebElement styleButton;
 
-    @FindBy(css = "div.filter-options-item.allow.active div.filter-options-content ol.items:nth-child(1) li.item:nth-child(1)")
+    @FindBy(css = "div.filter-options-item.allow.active div.filter-options-content ol.items:nth-child(1) li.item:nth-child(1) a")
     WebElement teeButtonFromStyle;
 
-    @FindBy(css = "#narrow-by-list .filter-options-item:first-child .filter-options-title:nth-child(1)")
+    @FindBy(css = ".filter-options-item:nth-child(1)")
     WebElement sizeButton;
 
     @FindBy(css = "#narrow-by-list > div.filter-options-item.allow.active > div.filter-options-content > div > div > a:nth-child(1) > div")

@@ -28,6 +28,5 @@ public class FiltersTest extends BaseTest {
         // to size
         womenPage.clickSizeButton();
         womenPage.clickMSizeButton();
-        
     }
 }
