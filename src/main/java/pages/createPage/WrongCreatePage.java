@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import data.Constants;
 import data.ErrorWarnings;
+import utils.Auxiliar;
 import utils.Sleeper;
 
 public class WrongCreatePage extends StructureCreatePage {
@@ -17,7 +18,7 @@ public class WrongCreatePage extends StructureCreatePage {
 
         for (int i = 0; i < fields.length; i++) {
             Sleeper.waitUntilIsVisible(driver, fields[i]);
-            fields[i].sendKeys(Constants.DATA[i]);
+            fields[i].sendKeys(Auxiliar.DATA[i]);
         }
     }
 
@@ -36,8 +37,8 @@ public class WrongCreatePage extends StructureCreatePage {
 
         for (int i = 0; i < fields.length; i++) {
             Sleeper.waitUntilIsVisible(driver, fields[i]);
-            if (i == fields.length - 1) fields[i].sendKeys(Constants.WDATA[0]);
-            else fields[i].sendKeys(Constants.DATA[i]);
+            if (i == fields.length - 1) fields[i].sendKeys(Auxiliar.WDATA[0]);
+            else fields[i].sendKeys(Auxiliar.DATA[i]);
         }
     }
 
@@ -53,7 +54,7 @@ public class WrongCreatePage extends StructureCreatePage {
 
         for (int i = 0; i < fields.length; i++) {
             Sleeper.waitUntilIsVisible(driver, fields[i]);
-            fields[i].sendKeys(Constants.DATA[i]);
+            fields[i].sendKeys(Auxiliar.DATA[i]);
         }
     }
 
@@ -68,8 +69,8 @@ public class WrongCreatePage extends StructureCreatePage {
 
         for (int i = 0; i < fields.length; i++) {
             Sleeper.waitUntilIsVisible(driver, fields[i]);
-            if (Constants.DATA[i].equals("passWORD!")) fields[i].sendKeys(Constants.WDATA[1]);
-            else fields[i].sendKeys(Constants.DATA[i]);
+            if (Auxiliar.DATA[i].equals("passWORD!")) fields[i].sendKeys(Auxiliar.WDATA[1]);
+            else fields[i].sendKeys(Auxiliar.DATA[i]);
         }
     }
 
@@ -85,7 +86,7 @@ public class WrongCreatePage extends StructureCreatePage {
 
         for (int i = 0; i < fields.length; i++) {
             Sleeper.waitUntilIsVisible(driver, fields[i]);
-            fields[i].sendKeys(Constants.DATA[i]);
+            fields[i].sendKeys(Auxiliar.DATA[i]);
         }
     }
 
@@ -100,9 +101,9 @@ public class WrongCreatePage extends StructureCreatePage {
         for (int i = 0; i < fields.length; i++) {
             Sleeper.waitUntilIsVisible(driver, fields[i]);
             try {
-                fields[i].sendKeys(Constants.DATA[i]);
+                fields[i].sendKeys(Auxiliar.DATA[i]);
             } catch (IndexOutOfBoundsException e) {
-                fields[i].sendKeys(Constants.WDATA[1]);
+                fields[i].sendKeys(Auxiliar.WDATA[1]);
             }
         }
     }

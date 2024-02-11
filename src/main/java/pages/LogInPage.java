@@ -20,8 +20,8 @@ public class LogInPage extends BasePage {
     }
 
     public void completeWithEmailAndPassWord() {
-        email.sendKeys(Constants.EMAIL);
-        password.sendKeys(Constants.PASSWORD);
+        email.sendKeys(String.valueOf(Constants.EMAIL));
+        password.sendKeys(String.valueOf(Constants.PASSWORD));
     }
 
     public void pressLogInButton() {

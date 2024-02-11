@@ -27,7 +27,7 @@ public class CheckOutPage extends BasePage {
 
     public void completeCompanyField() {
         Sleeper.waitUntilIsInteractable(driver, company);
-        company.sendKeys(Constants.COMPANY);
+        company.sendKeys(String.valueOf(Constants.COMPANY));
     }
 
     public void clickAndSelectField(String xpath, String selection) {

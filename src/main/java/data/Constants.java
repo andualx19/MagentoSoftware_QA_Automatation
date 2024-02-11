@@ -25,7 +25,11 @@ public enum Constants {
     PHONE("21323543"),
 
     // Colors
-    RED_COLOR("rgba(224, 43, 39, 1)");
+    RED_COLOR("rgba(224, 43, 39, 1)"),
+
+    // Datas
+    EMAIL("crocodil.pisica453702@gmail.com"),
+    PASSWORD("passWORD!");
 
     public final String value;
 }

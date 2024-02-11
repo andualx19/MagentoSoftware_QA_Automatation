@@ -10,8 +10,6 @@ public class Auxiliar {
             "Crocodil", "Pisica", fakeMail(), "passWORD!"
     };
 
-    public static final String EMAIL = "crocodil.pisica453702@gmail.com", PASSWORD = "passWORD!";
-
     // Wrong info
     public static final String[] WDATA = {
             "crocodilpisica", "pass"
