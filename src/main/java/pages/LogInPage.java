@@ -1,10 +1,9 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.Constants;
+import data.Constants;
 
 public class LogInPage extends BasePage {
     @FindBy(css = "#email")

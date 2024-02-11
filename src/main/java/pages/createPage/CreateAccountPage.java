@@ -4,8 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-import utils.Constants;
-import utils.ErrorWarnings;
+import data.Constants;
+import data.ErrorWarnings;
+import utils.Auxiliar;
 import utils.Sleeper;
 
 public class CreateAccountPage extends StructureCreatePage {
@@ -44,9 +45,9 @@ public class CreateAccountPage extends StructureCreatePage {
         for (int i = 0; i < fields.length; i++) {
             Sleeper.waitUntilIsVisible(driver, fields[i]);
             try {
-                fields[i].sendKeys(Constants.DATA[i]);
+                fields[i].sendKeys(Auxiliar.DATA[i]);
             } catch (IndexOutOfBoundsException e) {
-                fields[i].sendKeys(Constants.DATA[3]);
+                fields[i].sendKeys(Auxiliar.DATA[3]);
             }
         }
     }

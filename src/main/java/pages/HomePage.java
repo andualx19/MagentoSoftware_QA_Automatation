@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utils.Sleeper;
 import org.testng.Assert;
-import utils.ErrorWarnings;
+import data.ErrorWarnings;
 
 public class HomePage extends BasePage {
     @FindBy(css = "#ui-id-4")

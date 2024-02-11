@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import pages.BasePage;
-import utils.Constants;
-import utils.ErrorWarnings;
+import data.Constants;
+import data.ErrorWarnings;
 import utils.Sleeper;
 
 public abstract class StructureCreatePage extends BasePage {
@@ -50,7 +50,7 @@ public abstract class StructureCreatePage extends BasePage {
         errors = new WebElement[] {firstnaemErr, lastnameErr, emailErr, passwordErr, passwordConfErr};
         for (WebElement element : errors) {
             Sleeper.waitUntilIsVisible(driver, element);
-            Assert.assertEquals(element.getCssValue(Constants.PROPERTY_COLOR), Constants.RED_COLOR,
+            Assert.assertEquals(element.getCssValue(String.valueOf(Constants.PROPERTY_COLOR)), Constants.RED_COLOR,
                     ErrorWarnings.WRONG_COLOR_DISPLAYED);
         }
     }

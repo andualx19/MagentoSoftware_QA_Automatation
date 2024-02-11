@@ -3,8 +3,8 @@ package pages.createPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import utils.Constants;
-import utils.ErrorWarnings;
+import data.Constants;
+import data.ErrorWarnings;
 import utils.Sleeper;
 
 public class WrongCreatePage extends StructureCreatePage {

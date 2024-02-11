@@ -1,4 +1,4 @@
-package utils;
+package data;
 
 public class ErrorWarnings {
     public static final String WRONG_TEXT_DISPLAYED = "Text does not match",

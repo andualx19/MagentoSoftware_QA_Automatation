@@ -1,5 +1,6 @@
 package cases;
 
+import data.Constants;
 import org.testng.annotations.Test;
 import pages.CheckOutPage;
 import pages.HeaderPage;
@@ -8,7 +9,6 @@ import pages.productsPages.FitnessPage;
 import pages.productsPages.JacketsWomenPage;
 import pages.LogInPage;
 import pages.productsPages.PantsMenPage;
-import utils.Constants;
 
 public class EndToEndTest extends BaseTest {
     @Test
@@ -48,12 +48,12 @@ public class EndToEndTest extends BaseTest {
         headerPage.clickProceedCheckButton();
 
         checkOutPage.completeCompanyField();
-        checkOutPage.completeFieldWithInformation(Constants.STREET_X, Constants.ADRESS);
-        checkOutPage.completeFieldWithInformation(Constants.CITY_X, Constants.CITY);
-        checkOutPage.completeFieldWithInformation(Constants.ZIP_X, Constants.ZIP);
-        checkOutPage.completeFieldWithInformation(Constants.PHONE_X, Constants.PHONE);
-        checkOutPage.clickAndSelectField(Constants.COUNTRY_I_X, Constants.COUNTRY_O_X);
-        checkOutPage.clickAndSelectField(Constants.JUDET_I_X, Constants.JUDET_O_X);
+        checkOutPage.completeFieldWithInformation(String.valueOf(Constants.STREET_X), String.valueOf(Constants.ADRESS));
+        checkOutPage.completeFieldWithInformation(String.valueOf(Constants.CITY_X), String.valueOf(Constants.CITY));
+        checkOutPage.completeFieldWithInformation(String.valueOf(Constants.ZIP_X), String.valueOf(Constants.ZIP));
+        checkOutPage.completeFieldWithInformation(String.valueOf(Constants.PHONE_X), String.valueOf(Constants.PHONE));
+        checkOutPage.clickAndSelectField(String.valueOf(Constants.COUNTRY_I_X), String.valueOf(Constants.COUNTRY_O_X));
+        checkOutPage.clickAndSelectField(String.valueOf(Constants.JUDET_I_X), String.valueOf(Constants.JUDET_O_X));
 
         checkOutPage.pressNextButton();
         checkOutPage.pressOrderCheckout();
